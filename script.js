@@ -150,14 +150,26 @@ function game() {
     }
 
     if (playerScore === 5) {
-        console.log('\n' + 'Congratulations, you won!!!');
+        console.log('\n' + 'Congratulations, you won!!!' + '\n');
     }
     else {
-        console.log('\n' + 'Better luck next time loser...');
+        console.log('\n' + 'Better luck next time loser...' + '\n');
     }
+
+    restart();
 }
 
+function restart() {
+    let reset = prompt('Do you want to play again?')
 
+    reset = reset.toLowerCase();
 
+    if (reset === 'yes') {
+        game();
+    }
+    else {
+        console.log('Thanks for playing!');
+    }
+}
 
 game();
